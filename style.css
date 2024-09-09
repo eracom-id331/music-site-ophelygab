@@ -23,15 +23,37 @@ img {
 .acceuil {
   position: relative;
 }
-
-.acceuil h1 {
+.acceuil .logo {
   position: absolute;
-  top: 2%;
-  left: 5%;
-  font-family: "Comic Sans", "Courier", sans-serif;
-  font-size: 500%;
+  top: 50%;
+  left: 50%;
+  max-width: 1500px;
+  transform: translate(-50%, -50%);
+  /* background-color: #bfedc1; */
+
+  /* font-family: "Comic Sans", "Courier", sans-serif;
+  color: #e79ed1;
+  font-style: bold; */
 }
 
+/* header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+} */
+
+header a {
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Comic Sans", "Courier", sans-serif;
+  color: #bfedc1;
+  font-style: bold;
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+}
 /* =======================
    EXEMPLE de Media Query
    ======================= */
