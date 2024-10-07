@@ -1,6 +1,7 @@
 /* ==============
    Style de base
    ============== */
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 html {
   color: #222;
@@ -69,24 +70,35 @@ header {
 }
 header a {
   text-decoration: none;
-  font-size: 50px;
-  font-family: "Comic Sans", "Courier", sans-serif;
+  font-size: 35px;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
   color: #bfedc1;
   font-style: bold;
   margin-bottom: 1rem;
+  margin-right: 0.5rem;
 }
 .align h2 {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
+  padding: 0.5rem 1rem 0 1rem;
 }
 
 .container {
-  padding: 0 10rem;
+  padding: 0 15rem;
   font-family: "Comic Sans", "Courier", sans-serif;
 }
 
 h1 {
   font-size: 50px;
+}
+
+/* VIDEOS */
+iframe {
+  width: 100%;
+  height: auto;
 }
 
 /* collones*/
@@ -107,11 +119,11 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-.albums img {
+/* .albums img {
   width: 100%;
   aspect-ratio: 1/1;
   height: ;
-}
+} */
 
 /* =======================
    EXEMPLE de Media Query
