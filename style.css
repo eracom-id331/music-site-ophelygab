@@ -25,35 +25,94 @@ img {
 }
 .acceuil .logo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 1500px;
-  transform: translate(-50%, -50%);
-  /* background-color: #bfedc1; */
 
-  /* font-family: "Comic Sans", "Courier", sans-serif;
-  color: #e79ed1;
-  font-style: bold; */
+  top: 12%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: rgba(231, 158, 209, 0.8);
+  font-weight: bold;
+
+  /* background-color: #bfedc1; */
+}
+@media only screen and (min-width: 800px) {
+  .acceuil .logo {
+    font-size: 200px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .acceuil .logo {
+    font-size: 400px;
+  }
+}
+.menu {
+  display: flex;
+  flex-direction: column; /* Menu vertical */
+  align-items: flex-end; /* Aligne le menu à droite */
+  position: fixed; /* Rend le menu collant */
+  bottom: 0; /* Place le menu en bas de la page */
+  z-index: 10; /* Assure que le menu reste au-dessus des autres éléments */
 }
 
-/* header {
+header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
-} */
-
+  position: absolute; /* Le positionne au-dessus de l'image */
+  top: 0;
+  right: 0;
+  z-index: 10; /* Assure que la navigation est au-dessus de l'image */
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
 header a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 50px;
   font-family: "Comic Sans", "Courier", sans-serif;
   color: #bfedc1;
   font-style: bold;
+  margin-bottom: 1rem;
+}
+.align h2 {
+  text-align: center;
+  font-size: 25px;
 }
 
+.container {
+  padding: 0 10rem;
+  font-family: "Comic Sans", "Courier", sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/* collones*/
 .albums {
   display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: rgba(231, 158, 209, 0.75);
+  padding: 2rem;
 }
+@media only screen and (min-width: 800px) {
+  .albums {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .albums {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.albums img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  height: ;
+}
+
 /* =======================
    EXEMPLE de Media Query
    ======================= */
