@@ -1,6 +1,7 @@
 /* ==============
    Style de base
    ============== */
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 html {
   color: #222;
@@ -23,14 +24,106 @@ img {
 .acceuil {
   position: relative;
 }
-
-.acceuil h1 {
+.acceuil .logo {
   position: absolute;
-  top: 2%;
-  left: 5%;
-  font-family: "Comic Sans", "Courier", sans-serif;
-  font-size: 500%;
+
+  top: 12%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: rgba(231, 158, 209, 0.8);
+  font-weight: bold;
+
+  /* background-color: #bfedc1; */
 }
+@media only screen and (min-width: 800px) {
+  .acceuil .logo {
+    font-size: 200px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .acceuil .logo {
+    font-size: 400px;
+  }
+}
+.menu {
+  display: flex;
+  flex-direction: column; /* Menu vertical */
+  align-items: flex-end; /* Aligne le menu à droite */
+  position: fixed; /* Rend le menu collant */
+  bottom: 0; /* Place le menu en bas de la page */
+  z-index: 10; /* Assure que le menu reste au-dessus des autres éléments */
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: absolute; /* Le positionne au-dessus de l'image */
+  top: 0;
+  right: 0;
+  z-index: 10; /* Assure que la navigation est au-dessus de l'image */
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+header a {
+  text-decoration: none;
+  font-size: 35px;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  color: #bfedc1;
+  font-style: bold;
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+}
+.align h2 {
+  text-align: center;
+  font-size: 20px;
+  padding: 0.5rem 1rem 0 1rem;
+}
+
+.container {
+  padding: 0 15rem;
+  font-family: "Comic Sans", "Courier", sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/* VIDEOS */
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* collones*/
+.albums {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: rgba(231, 158, 209, 0.75);
+  padding: 2rem;
+}
+@media only screen and (min-width: 800px) {
+  .albums {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .albums {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/* .albums img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  height: ;
+} */
 
 /* =======================
    EXEMPLE de Media Query
