@@ -10,6 +10,7 @@ html {
 
 body {
   margin: 0;
+  color: #2c0735;
 }
 
 img {
@@ -18,11 +19,12 @@ img {
 }
 
 /* ==============
-   mise en page
-   ============== */
+      mise en page
+      ============== */
 
 .acceuil {
   position: relative;
+  max-height: 1080px;
 }
 .acceuil .logo {
   position: absolute;
@@ -33,7 +35,7 @@ img {
   text-align: center;
   transform: translate(-50%, -50%);
   font-size: 100px;
-  color: rgba(231, 158, 209, 0.8);
+  color: rgba(231, 158, 209, 0.85);
   font-weight: bold;
 
   /* background-color: #bfedc1; */
@@ -43,7 +45,12 @@ img {
     font-size: 200px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
+  .acceuil .logo {
+    font-size: 310px;
+  }
+}
+@media only screen and (min-width: 1600px) {
   .acceuil .logo {
     font-size: 400px;
   }
@@ -52,12 +59,18 @@ img {
   display: flex;
   flex-direction: column; /* Menu vertical */
   align-items: flex-end; /* Aligne le menu à droite */
-  position: fixed; /* Rend le menu collant */
+  position: fixed; /*Rend le menu collant */
   bottom: 0; /* Place le menu en bas de la page */
   z-index: 10; /* Assure que le menu reste au-dessus des autres éléments */
 }
+.menuScrolled {
+  display: flex;
+  flex-direction: column; /* Menu vertical */
+  align-items: flex-end; /* Aligne le menu à droite */
+  z-index: 10; /* Assure que le menu reste au-dessus des autres éléments */
+}
 
-header {
+.navbar {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -68,9 +81,19 @@ header {
   margin-top: 1rem;
   margin-right: 2rem;
 }
-header a {
+.navbarScrolled {
+  width: 100%;
+  right: 0;
+  z-index: 10; /* Assure que la navigation est au-dessus de l'image */
+  margin-top: 1rem;
+  margin-right: 2rem;
+  position: absolute;
+  right: 0; /* Align the header2 to the right, ignoring the container's padding */
+}
+
+.navbar a {
   text-decoration: none;
-  font-size: 35px;
+  font-size: 40px;
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
@@ -80,25 +103,84 @@ header a {
   margin-bottom: 1rem;
   margin-right: 0.5rem;
 }
+
+.navbarScrolled a {
+  text-decoration: none;
+  font-size: 40px;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  color: #bfedc1;
+  font-style: bold;
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+}
+.main-flex-container {
+  display: flex; /* To align items side by side */
+  justify-content: space-between; /* Optional: add space between header and video */
+  align-items: flex-end; /* Align both at the top */
+  gap: 1rem; /* Adjust the spacing between the two sections */
+}
+
+.main-container {
+  display: flex; /* Les deux divs seront placées côte à côte */
+}
 .align h2 {
   text-align: center;
   font-size: 20px;
   padding: 0.5rem 1rem 0 1rem;
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  padding: 2rem;
+  margin: 0;
+  letter-spacing: 3px;
+  font-size: 50px;
 }
 
 .container {
   padding: 0 15rem;
   font-family: "Comic Sans", "Courier", sans-serif;
 }
-
-h1 {
-  font-size: 50px;
+.music-video-container {
+  background-color: rgba(231, 158, 209, 0.75); /* Couleur de fond similaire */
+  padding: 2rem; /* Espacement intérieur */
+  margin: 2rem 0; /* Espacement entre les sections */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre douce */
+}
+.music-video-container h1,
+.video h1 {
+  text-align: center; /* Centre le texte */
+  font-size: 50px; /* Taille de la police, ajuste si nécessaire */
+  color: #222; /* Couleur du texte */
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5),
+    /* Ombre blanche */ 4px 4px 0 rgba(231, 158, 209, 0.75); /* Ombre rose */
+  transform: translateZ(0); /* Active le rendu 3D */
 }
 
 /* VIDEOS */
-iframe {
-  width: 100%;
-  height: auto;
+
+.video-container {
+  display: flex; /* Utilise flexbox pour aligner les vidéos en colonnes */
+  justify-content: center; /* Espace entre les éléments */
+  flex-wrap: wrap; /* Permet de gérer les retours à la ligne si nécessaire */
+  padding: 0 2.5rem;
+  gap: 2rem;
+}
+
+.video-item {
+  flex: 1; /* Chaque vidéo prend une part égale de l'espace */
+  margin: 1rem; /* Marge autour de chaque vidéo */
+  text-align: center; /* Centre le titre sous la vidéo */
+  max-width: 560px; /* Limite la largeur des vidéos */
+}
+
+.video-item h2 {
+  margin-top: 0.5rem;
+  font-family: "Rubik", sans-serif;
 }
 
 /* collones*/
@@ -106,9 +188,19 @@ iframe {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  background-color: rgba(231, 158, 209, 0.75);
   padding: 2rem;
 }
+.albums img {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  /* border-radius: 8px; */
+  transition: transform 0.3s ease;
+}
+
+.albums img:hover {
+  transform: scale(1.05); /* Légère mise en avant lors du survol */
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus forte au survol */
+}
+
 @media only screen and (min-width: 800px) {
   .albums {
     grid-template-columns: 1fr 1fr 1fr;
@@ -119,18 +211,114 @@ iframe {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-/* .albums img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  height: ;
-} */
 
 /* =======================
-   EXEMPLE de Media Query
-   ======================= */
+      bio
+      ======================= */
+
+.biography {
+  background-color: rgba(231, 158, 209, 0.75); /* Couleur de fond similaire */
+  padding: 2rem; /* Espacement intérieur */
+  margin: 2rem 0; /* Espacement entre les sections */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre douce */
+}
+
+.biography h1 {
+  text-align: center; /* Centre le titre */
+  /* margin-bottom: 1rem; Espace sous le titre */
+  background-color: transparent;
+  text-align: center;
+  margin-bottom: 1rem; /* Espacement en dessous du titre */
+  font-size: 50px; /* Taille de la police, ajuste si nécessaire */
+  color: #222; /* Couleur du texte */
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5),
+    /* Ombre blanche */ 4px 4px 0 rgba(231, 158, 209, 0.75); /* Ombre rose */
+  transform: translateZ(0); /* Active le rendu 3D */
+}
+
+.bio-content {
+  display: flex; /* Utilise flexbox pour aligner l'image et le texte */
+  align-items: center; /* Centre verticalement les éléments */
+  gap: 3rem; /* Espace entre l'image et le texte */
+}
+
+.bio-image {
+  width: 350px; /* Largeur de l'image */
+  height: auto; /* Garde les proportions de l'image */
+  border-radius: 10px; /* Coins arrondis pour l'image */
+}
+
+.bio-text {
+  flex: 1; /* Permet au texte de prendre le reste de l'espace */
+  margin: 0 2rem;
+  font-size: 20px;
+}
+
+.bio-text h2 {
+  margin: 0 0 2rem 0; /* Espace sous le sous-titre */
+}
+
+.bio-text p {
+  font-size: 1rem; /* Taille de police du texte */
+  line-height: 1.6; /* Espacement des lignes */
+  color: #222; /* Couleur du texte */
+}
+
+/* =======================
+      footer
+      ======================= */
+footer {
+  background-color: rgba(
+    231,
+    158,
+    209,
+    0.75
+  ); /* Couleur de fond avec transparence */
+  padding: 1rem 0; /* Espacement vertical */
+  text-align: center; /* Centre le texte */
+  position: relative; /* Pour éviter le positionnement fixe */
+  bottom: 0; /* Assure que le footer est au bas de la page */
+  width: 100%; /* Prend toute la largeur de l'écran */
+}
+
+.footer-content {
+  max-width: 1200px; /* Limite la largeur du contenu */
+  margin: 0 auto; /* Centre le contenu */
+  padding: 0 1rem; /* Marge intérieure */
+}
+
+.footer-nav {
+  margin-top: 0.5rem; /* Espacement au-dessus du menu de navigation */
+}
+
+.footer-nav a {
+  margin: 0 1rem; /* Espace entre les liens */
+  text-decoration: none; /* Enlève le soulignement des liens */
+  color: #222; /* Couleur des liens */
+  font-weight: bold; /* Met les liens en gras */
+  font-family: "Rubik", sans-serif;
+  color: #beedc1;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline; /* Souligne le lien au survol */
+}
+
+/* =======================
+      background
+      ======================= */
 
 @media only screen and (min-width: 800px) {
   html {
     background-color: #76cae6;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.5)
+      ),
+      /* Couche transparente sur l'image */ url("img/background.png"); /* Image de fond étoilée */
+    background-size: cover; /* Couvre toute la page */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
   }
 }
