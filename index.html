@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
-    <title>Chappell Roan's Web</title>
+    <title>Chappell Roan's World 🧚🏻‍♀️</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
@@ -14,12 +14,168 @@
   </head>
 
   <body>
-    <section class="acceuil">
-    <img
-      src="img/acceuil.jpeg"
-      alt="Chappell Roan"
-    />
-    <h1>Chappell Roan</h1r>
-    </section>
-  </body>
+    <main>
+      <section class="acceuil">
+        <img src="img/chappell.jpg" alt="Chappell Roan" />
+        <p class="logo">Chappell Roan</p>
+      </section>
+
+        <div class="container">
+          <section class="biography">
+            <h1>BIOGRAPHY</h1>
+            <div class="bio-content">
+              <img src="img/her1.jpeg" alt="Chappell Roan" class="bio-image" />
+              <div class="bio-text">
+                <h2>Chappell Roan</h2>
+                <p>
+                  Chappell Roan is an emerging artist known for her unique blend
+                  of pop and indie sounds. Hailing from the heart of the
+                  Midwest, she has captured the attention of audiences worldwide
+                  with her powerful voice and heartfelt lyrics. Her journey as a
+                  musician began at a young age, and she has since released
+                  several critically acclaimed albums that showcase her
+                  evolution as an artist. With each release, Chappell invites
+                  listeners into her world, sharing stories of love, loss, and
+                  self-discovery.
+                  <br />
+                  <br />
+                  Hailing from the heart of the Midwest, she has captured the
+                  attention of audiences worldwide with her powerful voice and
+                  heartfelt lyrics.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <div class="main-flex-container">
+            <!-- Nouvelle section pour MUSIC et VIDEOS -->
+            <section class="music-video-container">
+              <h1>MUSIC</h1>
+              <section class="albums align">
+                <div>
+                  <img src="img/albumscovers/1pig.jpg" alt="" />
+                  <h2>Good Luck, Babe!</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/2midwest.jpg" alt="" />
+                  <h2>The Rise and Fall of a Midwest Princess</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/3Hot_To_Go_COVER.jpg" alt="" />
+                  <h2>Hot To Go</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/4redwine.jpg" alt="" />
+                  <h2>Red Wine Supernova</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/5kaleidoscope.jpg" alt="" />
+                  <h2>Kaleido&shy;scope</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/6.jpeg" alt="" />
+                  <h2>Casual</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/7femininomenon.jpg" alt="" />
+                  <h2>Feminin&shy;omenon</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/8karma.jpg" alt="" />
+                  <h2>My Kink is Karma</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/9naked.jpg" alt="" />
+                  <h2>Naked in Manhattan</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/10love ma anyway.jpg" alt="" />
+                  <h2>Love Me Anyway</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/11ppp.jpg" alt="" />
+                  <h2>Pink Pony Club</h2>
+                </div>
+                <div>
+                  <img src="img/albumscovers/12california.jpg" alt="" />
+                  <h2>California</h2>
+                </div>
+              </section>
+
+              <section class="video">
+                <h1>VIDEOS</h1>
+                <div class="video-container">
+                  <div class="video-item">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/BIAksPsobpM?si=qAdNr2FO2uSNd91-"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                    <h2>Video Title 1</h2>
+                  </div>
+                  <div class="video-item">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/VIDEO_ID_2"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                    <h2>Video Title 2</h2>
+                  </div>
+                </div>
+              </section>
+            </section>
+
+            <div id="navBarID" class="navbar">
+              <nav id="menuID" class="menu">
+                <a class="nav-item" href="#">MUSIC</a>
+                <a class="nav-item" href="#">VIDEO</a>
+                <a class="nav-item" href="#">HER</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <footer id="footerID">
+      <div class="footer-content">
+        <p>&copy; 2024 Chappell Roan. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </nav>
+      </div>
+    </footer>
+  </body><script>
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navBarID");
+      const menu = document.getElementById("menuID");
+      const footer = document.getElementById("footerID");
+      const footerPosition = footer.getBoundingClientRect().top + window.scrollY;
+      const scrollPosition = window.scrollY + window.innerHeight;
+      
+      if (scrollPosition > footerPosition) {
+        navbar.classList.add("navbarScrolled");
+        menu.classList.add("menuScrolled");
+        navbar.classList.remove("navbar");
+        menu.classList.remove("menu");
+      } else {
+        navbar.classList.add("navbar");
+        menu.classList.add("menu");
+        navbar.classList.remove("navbarScrolled");
+        menu.classList.remove("menuScrolled");
+      }
+    });
+  </script>
+  
 </html>
